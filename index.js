@@ -110,8 +110,8 @@ Use the getInningScore() function below to do the following:
 
 function getInningScore(callback) {
   return {
-    home: callback(),
-    away: callback(),
+    Home: callback(),
+    Away: callback(),
   }
 }
 
@@ -158,30 +158,34 @@ Use the scoreboard function below to do the following:
 ]  
   */
 
-function scoreboard(innings, getInningScoreCB, inningCB) {
-  let newArr = []
-
-  let scoreHome = 0
-  let scoreAway = 0
-
-  for (let i = 1; i < innings; i++) {
-    scoreHome = scoreHome + inningCB()
-    scoreAway = scoreAway + inningCB()
-    newArr.push(`Inning ${i}: Away ${scoreAway} - Home ${scoreHome}`)
-  }
-
-  if (scoreAway === scoreHome) {
-    newArr.push(
-      `This game will require extra innings: Away ${scoreAway} - Home ${scoreHome}`
-    )
-  } else {
-    newArr.push(`Final Score: Away ${scoreAway} - Home ${scoreHome}`)
-  }
-
-  return newArr
+function scoreboard(/* CODE HERE */) {
+  /* CODE HERE */
 }
 
-console.log(scoreboard(9, getInningScore, inning))
+// function scoreboard(innings, inningCB) {
+//   let newArr = []
+
+//   let scoreHome = 0
+//   let scoreAway = 0
+
+//   for (let i = 1; i < innings; i++) {
+//     scoreHome = scoreHome + inningCB()
+//     scoreAway = scoreAway + inningCB()
+//     newArr.push(`Inning ${i}: Away ${scoreAway} - Home ${scoreHome}`)
+//   }
+
+//   if (scoreAway === scoreHome) {
+//     newArr.push(
+//       `This game will require extra innings: Away ${scoreAway} - Home ${scoreHome}`
+//     )
+//   } else {
+//     newArr.push(`Final Score: Away ${scoreAway} - Home ${scoreHome}`)
+//   }
+
+//   return newArr
+// }
+
+// console.log(scoreboard(9, inning))
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo() {
